@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    background-color: #000;
+    padding: 40px 0;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    transition: 1s;
+}
+
+.side {
+    backface-visibility: hidden;
+    color: #fff;
+    position: absolute;
+    font-size: 70px;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #fff;
+    text-align: center;
+    line-height: 300px;
+    background-color: #000;
+}
+
+.side a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.side a:hover {
+    background-color: #fff;
+    transition: 1s;
+}
+
+.side a svg {
+    /*width: 80%;
+    height: 80%;*/
+    fill: #fff;
+    transition: 1s;
+}
+
+.side a:hover svg {
+    fill: #000;
+    transition: 1s;
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: yellow;
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: brown;
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+.lefted {
+    transform: rotateX(0deg) rotateY(90deg);
+    transition: 1s;
+}
+
+.fronted {
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: 1s;
+}
+
+.bottomed {
+    transform: rotateX(90deg) rotateY(0deg);
+    transition: 1s;
+}
+
+.sprite {
+    display: none;
+}
+
+.svg-telegram {
+    width: 200px;
+}
